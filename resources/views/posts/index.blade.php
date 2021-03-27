@@ -26,7 +26,7 @@
                     <th scope="row">{{ $post->id }}</th>
                     <td>{{ $post->title }}</td>
                     <td>{{ $post->description }}</td>
-                    <td>{{ $post->price }}</td>
+                    <td>{{ $post->price }}$</td>
                     <td class="table-buttons">
                         <a href="{{ route('posts.show', $post) }}" class="btn btn-success">
                             <i class="fa fa-eye"></i>

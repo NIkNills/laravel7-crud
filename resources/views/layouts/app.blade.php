@@ -53,6 +53,11 @@
     </div>
 
 
-    <script src="{{asset('js/app.js')}}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script>
+        $(function() {
+            $('.alert-success').fadeOut(3000);
+        });
+    </script>
 </body>
 </html>
