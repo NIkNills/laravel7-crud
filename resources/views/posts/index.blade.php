@@ -18,6 +18,8 @@
                 <th scope="col">#</th>
                 <th scope="col">Название</th>
                 <th scope="col">Описание</th>
+                <th scope="col">Создан</th>
+                <th scope="col">Редактировался</th>
             </tr>
             </thead>
             <tbody>
@@ -26,6 +28,8 @@
                     <th scope="row">{{ $post->id }}</th>
                     <td>{{ $post->title }}</td>
                     <td>{{ $post->description }}</td>
+                    <td>{{ $post->created_at }}</td>
+                    <td>{{ $post->updated_at }}</td>
                     <td class="table-buttons">
                         <a href="{{ route('posts.show', $post) }}" class="btn btn-success">
                             <i class="fa fa-eye"></i>

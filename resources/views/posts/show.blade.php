@@ -8,6 +8,8 @@
             <div class="card-body">
                 <h3>{{ $post->title }}</h3>
                 <p>{{ $post->description }}</p>
+                <p>Таск создан: {{ $post->created_at }}</p>
+                <p>Таск редактировался: {{ $post->updated_at }}</p>
             </div>
         </div>
     </div>
