@@ -3,24 +3,25 @@
 @section('title', 'Все посты')
 
 @section('content')
-    <a href="{{ route('posts.create') }}" class="btn btn-success">Создать пост</a>
+    <div class="container">
+        <a href="{{ route('posts.create') }}" class="btn btn-success">Создать пост</a>
 
-    @if(session()->get('success'))
-        <div class="alert alert-success mt-3">
-            {{ session()->get('success') }}
-        </div>
-    @endif
+        @if(session()->get('success'))
+            <div class="alert alert-success mt-3">
+                {{ session()->get('success') }}
+            </div>
+        @endif
 
-    <table class="table table-striped mt-3">
-        <thead>
+        <table class="table table-striped mt-3">
+            <thead>
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Название</th>
                 <th scope="col">Описание</th>
                 <th scope="col">Цена</th>
             </tr>
-        </thead>
-        <tbody>
+            </thead>
+            <tbody>
             @foreach($posts as $post)
                 <tr>
                     <th scope="row">{{ $post->id }}</th>
@@ -44,6 +45,7 @@
                     </td>
                 </tr>
             @endforeach
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
 @endsection

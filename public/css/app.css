@@ -10950,3 +10950,11 @@ a.text-dark:focus {
   display: contents;
 }
 
+.home {
+  margin-top: -16px;
+  height: 100vh;
+  background-image: url("https://w3path.com/wp-content/uploads/2019/09/Webp.net-compress-image.jpg");
+  background-size: cover;
+  text-align: center;
+}
+
