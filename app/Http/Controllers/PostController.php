@@ -49,7 +49,7 @@ class PostController extends Controller
 
         $post->save();
 
-        return redirect('/posts')->with('success', 'Пост успешно добавлен');
+        return redirect('/posts')->with('success', 'Таск успешно добавлен');
     }
 
     /**
@@ -97,7 +97,7 @@ class PostController extends Controller
         $post->description = $request->get('description');
         $post->save();
 
-        return redirect('/posts')->with('success', 'Пост успешно отредактирован!');
+        return redirect('/posts')->with('success', 'Таск успешно отредактирован!');
     }
 
     /**
@@ -111,6 +111,6 @@ class PostController extends Controller
         $post = Post::find($id);
         $post->delete();
 
-        return redirect('/posts')->with('success', 'Пост удален!');
+        return redirect('/posts')->with('success', 'Таск удален!');
     }
 }

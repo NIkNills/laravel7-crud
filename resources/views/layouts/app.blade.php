@@ -23,7 +23,7 @@
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('posts.index') }}">Posts</a>
+                        <a class="nav-link" href="{{ route('posts.index') }}">Tasks</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -34,10 +34,7 @@
         </div>
     </nav>
 
-
         @yield('content')
-
-
 
     <script src="{{ asset('js/app.js') }}"></script>
     <script>

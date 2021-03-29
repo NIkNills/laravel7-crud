@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Редактировать пост'.$post->title)
+@section('title', 'Редактировать таск'.$post->title)
 
 @section('content')
     <div class="container">
@@ -28,7 +28,7 @@
                         <label for="post-description">Описание</label>
                         <textarea name="description" class="form-control" id="post-description" rows="3">{{ $post->description }}</textarea>
                     </div>
-                    <button type="submit" class="btn btn-success">Отредактировать пост</button>
+                    <button type="submit" class="btn btn-success">Отредактировать таск</button>
                 </form>
             </div>
         </div>

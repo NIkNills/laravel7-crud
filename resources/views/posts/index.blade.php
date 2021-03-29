@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Все посты')
+@section('title', 'Все таски')
 
 @section('content')
     <div class="container">
-        <a href="{{ route('posts.create') }}" class="btn btn-success">Создать пост</a>
+        <a href="{{ route('posts.create') }}" class="btn btn-success">Создать таск</a>
 
         @if(session()->get('success'))
             <div class="alert alert-success mt-3">
