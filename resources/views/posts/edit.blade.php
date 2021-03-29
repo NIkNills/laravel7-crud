@@ -29,7 +29,9 @@
                         <textarea name="description" class="form-control" id="post-description" rows="3">{{ $post->description }}</textarea>
                     </div>
                     <button type="submit" class="btn btn-success">Отредактировать таск</button>
+                    <a href="/" class="btn btn-danger">Вернуться на домашнюю страницу</a>
                 </form>
+
             </div>
         </div>
     </div>
