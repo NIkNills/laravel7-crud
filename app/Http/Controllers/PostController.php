@@ -40,13 +40,11 @@ class PostController extends Controller
         $request->validate([
             'title' => 'required|max:255',
             'description' => 'required|max:255',
-            'price' => 'required|max:255'
         ]);
 
         $post = new Post([
             'title' => $request->get('title'),
             'description' => $request->get('description'),
-            'price' => $request->get('price')
         ]);
 
         $post->save();
@@ -92,13 +90,11 @@ class PostController extends Controller
         $request->validate([
             'title' => 'required|max:255',
             'description' => 'required|max:255',
-            'price' => 'required|max:255'
         ]);
 
         $post = Post::find($id);
         $post->title = $request->get('title');
         $post->description = $request->get('description');
-        $post->price = $request->get('price');
         $post->save();
 
         return redirect('/posts')->with('success', 'Пост успешно отредактирован!');

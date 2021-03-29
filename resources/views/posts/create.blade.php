@@ -27,11 +27,6 @@
                         <label for="post-description">Описание</label>
                         <textarea name="description" class="form-control" id="post-description" rows="3">{{ old('description') }}</textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="post-price">Цена</label>
-                        <input type="text" name="price"
-                               value="{{ old('price') }}" class="form-control" id="post-price">
-                    </div>
                     <button type="submit" class="btn btn-success">Добавить пост</button>
                 </form>
             </div>

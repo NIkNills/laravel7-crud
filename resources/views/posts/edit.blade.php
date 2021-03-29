@@ -28,11 +28,6 @@
                         <label for="post-description">Описание</label>
                         <textarea name="description" class="form-control" id="post-description" rows="3">{{ $post->description }}</textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="post-price">Цена</label>
-                        <input type="text" name="price"
-                               value="{{ $post->price }}" class="form-control" id="post-price">
-                    </div>
                     <button type="submit" class="btn btn-success">Отредактировать пост</button>
                 </form>
             </div>
