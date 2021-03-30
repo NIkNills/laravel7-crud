@@ -10,6 +10,9 @@
                 <p>{{ $task->description }}</p>
                 <p>Таск создан: {{ $task->created_at }}</p>
                 <p>Таск редактировался: {{ $task->updated_at }}</p>
+                <a href="/tasks" class="btn btn-outline-secondary rounded-circle">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </a>
             </div>
         </div>
     </div>

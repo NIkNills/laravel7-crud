@@ -28,8 +28,10 @@
                         <label for="task-description">Описание</label>
                         <textarea name="description" class="form-control" id="task-description" rows="3">{{ $task->description }}</textarea>
                     </div>
+                    <a href="/tasks" class="btn btn-outline-secondary rounded-circle mr-xl-5">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                    </a>
                     <button type="submit" class="btn btn-success">Отредактировать таск</button>
-                    <a href="/" class="btn btn-danger">Вернуться на домашнюю страницу</a>
                 </form>
 
             </div>
