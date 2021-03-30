@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Post;
+use App\Task;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class TaskController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $tasks = Task::all();
 
-        return view('posts.index', compact('posts'));
+        return view('tasks.index', ['tasks'=>$tasks]);
     }
 
     /**
@@ -26,7 +26,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        return view('tasks.create');
     }
 
     /**
@@ -42,47 +42,47 @@ class PostController extends Controller
             'description' => 'required|max:255',
         ]);
 
-        $post = new Post([
+        $task = new Task([
             'title' => $request->get('title'),
             'description' => $request->get('description'),
         ]);
 
-        $post->save();
+        $task->save();
 
-        return redirect('/posts')->with('success', 'Таск успешно добавлен');
+        return redirect('/tasks')->with('success', 'Таск успешно добавлен');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Post  $post
+     * @param  \App\Task  $task
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        $post = Post::find($id);
+        $task = Task::find($id);
 
-        return view('posts.show', compact('post'));
+        return view('tasks.show', compact('task'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Post  $post
+     * @param  \App\Task  $task
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $post = Post::find($id);
+        $task = Task::find($id);
 
-        return view('posts.edit', compact('post'));
+        return view('tasks.edit', compact('task'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Post  $post
+     * @param  \App\Task  $task
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -92,25 +92,25 @@ class PostController extends Controller
             'description' => 'required|max:255',
         ]);
 
-        $post = Post::find($id);
-        $post->title = $request->get('title');
-        $post->description = $request->get('description');
-        $post->save();
+        $task = Task::find($id);
+        $task->title = $request->get('title');
+        $task->description = $request->get('description');
+        $task->save();
 
-        return redirect('/posts')->with('success', 'Таск успешно отредактирован!');
+        return redirect('/tasks')->with('success', 'Таск успешно отредактирован!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Post  $post
+     * @param  \App\Task  $task
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $post = Post::find($id);
-        $post->delete();
+        $task = Task::find($id);
+        $task->delete();
 
-        return redirect('/posts')->with('success', 'Таск удален!');
+        return redirect('/tasks')->with('success', 'Таск удален!');
     }
 }

@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="container">
-        <a href="{{ route('posts.create') }}" class="btn btn-success">Создать таск</a>
+        <a href="{{ route('tasks.create') }}" class="btn btn-success">Создать таск</a>
 
         @if(session()->get('success'))
             <div class="alert alert-success mt-3">
@@ -23,21 +23,21 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($posts as $post)
+            @foreach($tasks as $task)
                 <tr>
-                    <th scope="row">{{ $post->id }}</th>
-                    <td>{{ $post->title }}</td>
-                    <td>{{ $post->description }}</td>
-                    <td>{{ $post->created_at }}</td>
-                    <td>{{ $post->updated_at }}</td>
+                    <th scope="row">{{ $task->id }}</th>
+                    <td>{{ $task->title }}</td>
+                    <td>{{ $task->description }}</td>
+                    <td>{{ $task->created_at }}</td>
+                    <td>{{ $task->updated_at }}</td>
                     <td class="table-buttons">
-                        <a href="{{ route('posts.show', $post) }}" class="btn btn-success">
+                        <a href="{{ route('tasks.show', $task) }}" class="btn btn-success">
                             <i class="fa fa-eye"></i>
                         </a>
-                        <a href="{{ route('posts.edit', $post) }}" class="btn btn-primary">
+                        <a href="{{ route('tasks.edit', $task) }}" class="btn btn-primary">
                             <i class="fa fa-pencil"></i>
                         </a>
-                        <form method="POST" action="{{ route('posts.destroy', $post) }}">
+                        <form method="POST" action="{{ route('tasks.destroy', $task) }}">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">

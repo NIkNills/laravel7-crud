@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::resource('posts','PostController');
+Route::resource('tasks','TaskController');

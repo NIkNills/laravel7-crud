@@ -20,7 +20,7 @@
                             <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('posts.index') }}">Tasks</a>
+                        <a class="nav-link" href="{{ route('tasks.index') }}">Tasks</a>
                     </li>
                 </ul>
             </div>

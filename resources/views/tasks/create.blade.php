@@ -16,16 +16,16 @@
                     </div>
                 @endif
 
-                <form method="POST" action="{{ route('posts.store') }}">
+                <form method="POST" action="{{ route('tasks.store') }}">
                     @csrf
                     <div class="form-group">
-                        <label for="post-title">Название</label>
+                        <label for="task-title">Название</label>
                         <input type="text" name="title"
-                               value="{{ old('title') }}" class="form-control" id="post-title">
+                               value="{{ old('title') }}" class="form-control" id="task-title">
                     </div>
                     <div class="form-group">
-                        <label for="post-description">Описание</label>
-                        <textarea name="description" class="form-control" id="post-description" rows="3">{{ old('description') }}</textarea>
+                        <label for="task-description">Описание</label>
+                        <textarea name="description" class="form-control" id="task-description" rows="3">{{ old('description') }}</textarea>
                     </div>
                     <button type="submit" class="btn btn-success">Добавить таск</button>
                 </form>

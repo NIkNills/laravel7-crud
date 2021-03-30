@@ -6,7 +6,7 @@
     <div class="home d-flex align-items-center">
         <div class="container">
             <h1 class="text-success">Мое первое CRUD приложение!</h1>
-            <a href="{{ route('posts.index') }}" class="btn btn-success">Жми сюда</a>
+            <a href="{{ route('tasks.index') }}" class="btn btn-success">Жми сюда</a>
         </div>
     </div>
 

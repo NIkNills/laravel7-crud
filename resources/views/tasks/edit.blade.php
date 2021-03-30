@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Редактировать таск'.$post->title)
+@section('title', 'Редактировать таск'.$task->title)
 
 @section('content')
     <div class="container">
@@ -16,17 +16,17 @@
                     </div>
                 @endif
 
-                <form method="POST" action="{{ route('posts.update', $post) }}">
+                <form method="POST" action="{{ route('tasks.update', $task) }}">
                     @csrf
                     @method('PATCH')
                     <div class="form-group">
-                        <label for="post-title">Название</label>
+                        <label for="task-title">Название</label>
                         <input type="text" name="title"
-                               value="{{ $post->title }}" class="form-control" id="post-title">
+                               value="{{ $task->title }}" class="form-control" id="task-title">
                     </div>
                     <div class="form-group">
-                        <label for="post-description">Описание</label>
-                        <textarea name="description" class="form-control" id="post-description" rows="3">{{ $post->description }}</textarea>
+                        <label for="task-description">Описание</label>
+                        <textarea name="description" class="form-control" id="task-description" rows="3">{{ $task->description }}</textarea>
                     </div>
                     <button type="submit" class="btn btn-success">Отредактировать таск</button>
                     <a href="/" class="btn btn-danger">Вернуться на домашнюю страницу</a>
