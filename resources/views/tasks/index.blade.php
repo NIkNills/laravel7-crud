@@ -20,6 +20,7 @@
                 <th scope="col">Описание</th>
                 <th scope="col">Создан</th>
                 <th scope="col">Редактировался</th>
+                <th scope="col"></th>
             </tr>
             </thead>
             <tbody>

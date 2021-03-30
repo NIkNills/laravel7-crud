@@ -1776,7 +1776,7 @@ pre code {
 .table th,
 .table td {
   padding: 0.75rem;
-  vertical-align: top;
+  /*vertical-align: top;*/
   border-top: 1px solid #dee2e6;
 }
 
@@ -10956,5 +10956,10 @@ a.text-dark:focus {
   background-image: url("https://w3path.com/wp-content/uploads/2019/09/Webp.net-compress-image.jpg");
   background-size: cover;
   text-align: center;
+}
+
+.table th,
+.table td {
+  vetical-align: iherit;
 }
 
