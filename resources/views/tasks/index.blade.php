@@ -26,11 +26,11 @@
             <tbody>
             @foreach($tasks as $task)
                 <tr>
-                    <th scope="row">{{ $task->id }}</th>
-                    <td>{{ $task->title }}</td>
-                    <td>{{ $task->description }}</td>
-                    <td>{{ $task->created_at }}</td>
-                    <td>{{ $task->updated_at }}</td>
+                    <th class="align-middle" scope="row">{{ $task->id }}</th>
+                    <td class="align-middle">{{ $task->title }}</td>
+                    <td class="align-middle">{{ $task->description }}</td>
+                    <td class="align-middle">{{ $task->created_at }}</td>
+                    <td class="align-middle">{{ $task->updated_at }}</td>
                     <td class="table-buttons">
                         <a href="{{ route('tasks.show', $task) }}" class="btn btn-success">
                             <i class="fa fa-eye"></i>
