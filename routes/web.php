@@ -17,7 +17,8 @@ Route::get('/', function () {
     return view('home');
 });
 
-
 Route::resource('tasks','TaskController');
 
+Route::get('/signup', 'AuthController@getSignup')->name('auth.signup');
+Route::post('/signup', 'AuthController@postSignup');
 //Nova::routes();
